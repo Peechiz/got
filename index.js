@@ -73,7 +73,6 @@ if (require.main === module){
     let {guess, KEY} = getGuess(schedule, cache)
     if (!runTests(guess)){
       cache[KEY] = true
-      // console.log(cache)
     } else {
       console.log('we did it!')
       console.log(guess)
