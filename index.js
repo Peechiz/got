@@ -26,9 +26,7 @@ const pickRandom = arr => {
 }
 
 const runTests = matrix => {
-  // console.log('running tests...');
   const passed = !tests.map((test, i) => {
-    // console.log('test'+i)
     return test(matrix)
   }).some(result => result === false)
   return passed
@@ -48,17 +46,8 @@ const uniq = (matrix, target) => {
   }, true)
 }
 
-/*
-  cache
-
-  {
-
-}
-*/
-
 
 function getGuess(schedule, cache){
-  // console.log('getting guess...');
   let guess = []
   let location = []
   while (guess.length !== 4) {
@@ -73,7 +62,6 @@ function getGuess(schedule, cache){
   if (cache[KEY] === true){
     return getGuess(schedule, cache)
   } else {
-    // console.log(guess)
     return {guess, KEY}
   }
 }
